@@ -4,7 +4,7 @@ provider "digitalocean" {
 
 resource "digitalocean_droplet" "drop_test" {
   image              = var.droplet_image
-  name               = "drop_test"
+  name               = "drop-test"
   region             = var.droplet_region
   size               = var.droplet_size
   backups            = false
