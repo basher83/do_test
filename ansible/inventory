@@ -1,0 +1,14 @@
+# Define a group 'all' which includes all child groups defined in the inventory.
+# In this case, the child group is 'jenkins'.
+[all:children]
+jenkins  # This means the 'jenkins' group is a child of the 'all' group.
+
+# Specify variables that apply to all hosts under the 'all' group.
+# These variables are inherited by any host under 'jenkins' (or any other child group of 'all').
+[all:vars]
+ansible_user=ansible  # The user to connect as on the remote hosts.
+ansible_python_interpreter=/usr/bin/python3  # Python interpreter on the remote hosts.
+
+# Define the 'jenkins' group which contains the Jenkins VM.
+[jenkins]
+jenkinsvm ansible_host=${DROPLET_IP}  # The 'jenkinsvm' host with its corresponding IP address.

@@ -1,6 +1,6 @@
 # do_test
 
-A simple Terraform project to provision a DigitalOcean droplet with a secure firewall and initial configuration using cloud-init.
+An example repo for use with env0. This repository contains a Terraform project to provision a DigitalOcean droplet with a secure firewall and initial configuration using cloud-init. Additionally, Ansible will be used to automate the configuration and management of a Jenkins docker image to the droplet.
 
 ## Features
 
@@ -8,6 +8,7 @@ A simple Terraform project to provision a DigitalOcean droplet with a secure fir
 - Sets up a custom `ansible` user with SSH key authentication.
 - Installs Python 3, pip, and Docker via cloud-init.
 - Configures a firewall to allow only SSH (22), HTTP (80), HTTPS (443), and ICMP.
+- Automates the deployment and management of a Jenkins docker image.
 
 ## Prerequisites
 
