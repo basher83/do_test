@@ -12,6 +12,7 @@ resource "digitalocean_droplet" "drop_test" {
   ssh_keys = [
     var.ssh_fingerprint
   ]
+  user_data = templatefile("digitalocean.tftpl")
 }
 
 # Firewall
